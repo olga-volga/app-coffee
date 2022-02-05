@@ -1,0 +1,26 @@
+@import '../../style/variables.scss';
+
+.best {
+	background-image: url('../../img/best-bg.jpg');
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 80px 0 110px;
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		margin: 19px -35px -20px;
+	}
+	&__column {
+		margin: 20px 35px;
+	}
+}
+@media (max-width: $md2) {
+	.best {
+		&__body {
+			flex-wrap: wrap;
+		}
+	}
+}

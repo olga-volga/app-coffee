@@ -1,5 +1,6 @@
 import Main from '../main/main';
 import About from '../about/about';
+import Best from '../best/best';
 
 import './app.scss';
 
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <Main />
       <About />
+      <Best />
     </div>
   );
 }
