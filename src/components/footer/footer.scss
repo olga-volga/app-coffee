@@ -1,0 +1,43 @@
+@import '../../style/variables.scss';
+
+.footer {
+	padding: 52px 0 21px;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__nav {
+		display: flex;
+		align-items: flex-end;
+	}
+	&__link {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 17px;
+		/* identical to box height */
+		color: $main;
+	}
+	&__list {
+		display: flex;
+		li {
+			margin-left: 40px;
+		}
+	}
+}
+@media (max-width: $md6) {
+	.footer {
+		&__nav,
+		&__list {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__list {
+			li {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+}
