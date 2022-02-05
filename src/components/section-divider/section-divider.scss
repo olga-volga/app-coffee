@@ -1,0 +1,8 @@
+@import '../../style/variables.scss';
+
+.section-divider {
+	width: 240px;
+	height: 1px;
+	background-color: $main;
+	margin: 0 auto;
+}

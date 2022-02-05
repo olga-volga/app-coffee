@@ -1,0 +1,44 @@
+@import '../../style/variables.scss';
+
+.about-section {
+	padding: 70px 0 60px;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	&__img {
+		width: 272px;
+		img {
+			width: 100%;
+			filter: drop-shadow(5px 5px 30px rgba($main, 0.25));
+		}
+	}
+	&__txt {
+		width: 346px;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		color: $main;
+		margin-top: 25px;
+	}
+}
+@media (max-width: $md2) {
+	.about-section {
+		&__body {
+			justify-content: center;
+		}
+		&__img {
+			display: none;
+		}
+		&__txt {
+			width: 590px;
+		}
+	}
+}
