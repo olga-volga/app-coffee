@@ -11,7 +11,7 @@ const Best = () => {
     return (
         <section className="best">
 			<div className="container">
-                <SectionTitle text="Our best" />
+                <SectionTitle title="Our best" />
 				<div className="best__body">
 					<div className="best__column">
 						<BestItem 
