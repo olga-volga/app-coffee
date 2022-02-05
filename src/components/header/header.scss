@@ -18,14 +18,14 @@
 		color: $light;
 		text-shadow: 0px 4px 4px rgba($main, 0.25);
 		padding-left: 35px;
-		/*&::before {
-			content: url(../img/logo.svg);
+		&::before {
+			content: url(../../img/logo.svg);
 			position: absolute;
 			bottom: 3px;
 			left: 0;
 			width: 35px;
 			height: 35px;
-		}*/
+		}
 	}
 	&__list {
 		display: flex;
