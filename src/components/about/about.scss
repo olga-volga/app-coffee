@@ -1,0 +1,18 @@
+@import '../../style/variables.scss';
+
+.about {
+	padding: 80px 0 100px;
+
+	&__body {
+		max-width: 590px;
+		margin: 0 auto;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		color: $main;
+		margin-top: 40px;
+	}
+}

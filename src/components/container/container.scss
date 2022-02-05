@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.container {
+	max-width: $container;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (max-width: $md2) {
+		max-width: none;
+		padding: 0 30px;
+	}
+	@media (max-width: $md6) {
+		padding: 0 20px;
+	}
+}
