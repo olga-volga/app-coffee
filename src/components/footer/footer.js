@@ -5,15 +5,15 @@ import './footer.scss';
 
 const Footer = () => {
     return (
-        <footer class="footer">
-			<div class="container">
-				<div class="footer__body">
-					<div class="footer__nav">
+        <footer className="footer">
+			<div className="container">
+				<div className="footer__body">
+					<div className="footer__nav">
                         <Logo href="#" />
-						<nav class="footer__menu">
-							<ul class="footer__list">
-								<li><a href="#" class="footer__link">Our coffee</a></li>
-								<li><a href="#" class="footer__link">For your pleasure</a></li>
+						<nav className="footer__menu">
+							<ul className="footer__list">
+								<li><a href="#" className="footer__link">Our coffee</a></li>
+								<li><a href="#" className="footer__link">For your pleasure</a></li>
 							</ul>
 						</nav>
 					</div>
