@@ -22,30 +22,41 @@ class App extends Component {
     this.state = {
       data: [
         {id: 1, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-        {id: 2, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99},
-        {id: 3, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99},
-        {id: 4, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
+        {id: 2, name: 'Solimo Coffee 2 kg', country: 'Kenya', price: 10.73},
+        {id: 3, name: 'Presto Coffee 1 kg', country: 'Columbia', price: 15.99},
+        {id: 4, name: 'Solimo Coffee 2 kg', country: 'Kenya', price: 10.73},
         {id: 5, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
         {id: 6, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99}
       ],
-      search: ''
+      search: '',
+      filter: ''
     }
   }
   updateSearch = (search) => {
     this.setState({search})
-    console.log(search);
   }
   searchCoffee = (items, search) => {
     if (search.length === 0) {
       return items;
     }
     return items.filter(item => {
-      return item.country.toLowerCase().indexOf(search.toLowerCase()) > -1
+      return item.name.toLowerCase().indexOf(search.toLowerCase()) > -1
     })
   }
+  updateFilter = (filter) => {
+    this.setState({filter})
+  }
+  filterCoffee = (items, filter) => {
+    if(filter) {
+      return items.filter(item => {
+        return item.country === filter;
+      });
+    }
+    return items;
+  }
   render() {
-    const {data, search} = this.state;
-    const cofeeList = this.searchCoffee(data, search);
+    const {data, search, filter} = this.state;
+    const cofeeList = this.filterCoffee(this.searchCoffee(data, search), filter);
     return (
       <div className="app">
         {/*<!-- MAIN PAGE -->*/}
@@ -58,7 +69,7 @@ class App extends Component {
         <MainSecondary theme="coffee" title="Our Coffee" />
         <AboutSecondary img={aboutBeans} alt="coffee" title="About our beans" />
         <SectionDivider />
-        <Search updateSearch={this.updateSearch} />
+        <Search updateSearch={this.updateSearch} updateFilter={this.updateFilter} />
         <CoffeeList data={cofeeList} />
         <Footer />
 

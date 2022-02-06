@@ -8,6 +8,11 @@ class Search extends Component {
 		this.state = {
 			value: ''
 		}
+		this.buttonsData = [
+			{name: 'Brazil', label: 'Brazil'},
+			{name: 'Kenya', label: 'Kenya'},
+			{name: 'Columbia', label: 'Columbia'}
+		]
 	}
 	changeValue = (e) => {
 		const value = e.target.value;
@@ -15,6 +20,19 @@ class Search extends Component {
 		this.props.updateSearch(value);
 	}
 	render() {
+		const buttons = this.buttonsData.map(item => {
+			const {name, label} = item;
+			return (
+				<button 
+					type="button"
+					className="btn" 
+					name={name} 
+					key={name}
+					onClick={() => this.props.updateFilter(name)}>
+						{label}
+				</button>
+			)
+		});
 		return (
 			<section className="search">
 				<div className="container">
@@ -36,9 +54,10 @@ class Search extends Component {
 							<div className="search-filter__body">
 								<p className="search-filter__label">Or filter</p>
 								<div className="search-filter-btns">
-									<button type="button" className="btn">Brazil</button>
+									{buttons}
+									{/*<button type="button" className="btn">Brazil</button>
 									<button type="button" className="btn">Kenya</button>
-									<button type="button" className="btn">Columbia</button>
+									<button type="button" className="btn">Columbia</button>*/}
 								</div>
 							</div>
 						</div>
