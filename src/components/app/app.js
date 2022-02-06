@@ -9,6 +9,7 @@ import AboutSecondary from '../about-secondary/about-secondary';
 import SectionDivider from '../section-divider/section-divider';
 import Search from '../search/search';
 import CoffeeList from '../coffee-list/coffee-list';
+import AboutCoffeeItem from '../about-coffee-item/about-coffee-item';
 
 import './app.scss';
 
@@ -42,6 +43,11 @@ class App extends Component {
         <SectionDivider />
         <Search />
         <CoffeeList data={data} />
+        <Footer />
+
+        {/*<!-- COFFEE ITEM PAGE -->*/}
+        <MainSecondary />
+        <AboutCoffeeItem />
         <Footer />
       </div>
     );
