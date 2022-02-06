@@ -13,6 +13,9 @@ import AboutCoffeeItem from '../about-coffee-item/about-coffee-item';
 
 import './app.scss';
 
+import aboutBeans from '../../img/about-beans.jpg';
+import aboutGoods from '../../img/about-goods.jpg';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +42,7 @@ class App extends Component {
   
         {/*<!-- OUR COFFEE PAGE -->*/}
         <MainSecondary theme="coffee" title="Our Coffee" />
-        <AboutSecondary />
+        <AboutSecondary img={aboutBeans} alt="coffee" title="About our beans" />
         <SectionDivider />
         <Search />
         <CoffeeList data={data} />
@@ -52,6 +55,10 @@ class App extends Component {
 
         {/*<!-- FOR YOUR PLEASURE PAGE -->*/}
         <MainSecondary theme="pleasure" title="For your pleasure" />
+        <AboutSecondary img={aboutGoods} alt="coffee cup" title="About our goods" />
+        <SectionDivider />
+        <CoffeeList data={data} />
+        <Footer />
       </div>
     );
   }
