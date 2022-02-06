@@ -1,11 +1,17 @@
 @import '../../style/variables.scss';
 
 .main-secondary {
-	background-image: url('../../img/our-coffee-bg.jpg');
     background-position: 50% 0%;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 52px 0 84px;
+
+    &_coffee {
+        background-image: url('../../img/our-coffee-bg.jpg');
+    }
+    &_pleasure {
+        background-image: url('../../img/pleasure-bg.jpg');
+    }
 
 	&__body {
 		margin-top: 60px;

@@ -38,7 +38,7 @@ class App extends Component {
         <Footer />
   
         {/*<!-- OUR COFFEE PAGE -->*/}
-        <MainSecondary />
+        <MainSecondary theme="coffee" title="Our Coffee" />
         <AboutSecondary />
         <SectionDivider />
         <Search />
@@ -46,9 +46,12 @@ class App extends Component {
         <Footer />
 
         {/*<!-- COFFEE ITEM PAGE -->*/}
-        <MainSecondary />
+        <MainSecondary theme="coffee" title="Our Coffee" />
         <AboutCoffeeItem />
         <Footer />
+
+        {/*<!-- FOR YOUR PLEASURE PAGE -->*/}
+        <MainSecondary theme="pleasure" title="For your pleasure" />
       </div>
     );
   }
