@@ -27,11 +27,25 @@ class App extends Component {
         {id: 4, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
         {id: 5, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
         {id: 6, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99}
-      ]
+      ],
+      search: ''
     }
   }
+  updateSearch = (search) => {
+    this.setState({search})
+    console.log(search);
+  }
+  searchCoffee = (items, search) => {
+    if (search.length === 0) {
+      return items;
+    }
+    return items.filter(item => {
+      return item.country.toLowerCase().indexOf(search.toLowerCase()) > -1
+    })
+  }
   render() {
-    const {data} = this.state;
+    const {data, search} = this.state;
+    const cofeeList = this.searchCoffee(data, search);
     return (
       <div className="app">
         {/*<!-- MAIN PAGE -->*/}
@@ -44,8 +58,8 @@ class App extends Component {
         <MainSecondary theme="coffee" title="Our Coffee" />
         <AboutSecondary img={aboutBeans} alt="coffee" title="About our beans" />
         <SectionDivider />
-        <Search />
-        <CoffeeList data={data} />
+        <Search updateSearch={this.updateSearch} />
+        <CoffeeList data={cofeeList} />
         <Footer />
 
         {/*<!-- COFFEE ITEM PAGE -->*/}
