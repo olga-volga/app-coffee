@@ -17,16 +17,17 @@ class App extends Component {
     super(props);
     this.state = {
       data: [
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99},
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99},
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-        {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99}
+        {id: 1, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
+        {id: 2, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99},
+        {id: 3, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99},
+        {id: 4, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
+        {id: 5, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
+        {id: 6, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99}
       ]
     }
   }
   render() {
+    const {data} = this.state;
     return (
       <div className="app">
         {/*<!-- MAIN PAGE -->*/}
@@ -40,7 +41,7 @@ class App extends Component {
         <AboutSecondary />
         <SectionDivider />
         <Search />
-        <CoffeeList />
+        <CoffeeList data={data} />
         <Footer />
       </div>
     );

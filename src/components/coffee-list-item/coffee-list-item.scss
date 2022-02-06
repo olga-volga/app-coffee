@@ -1,0 +1,36 @@
+@import '../../style/variables.scss';
+
+.coffee-list-item {
+    width: 220px;
+    min-height: 260px;
+    background-color: $light;
+    border-radius: 8px;
+    filter: drop-shadow(5px 5px 15px rgba($main, 0.25));
+    cursor: pointer;
+    padding: 37px 23px 22px;
+
+    &__img {
+        display: block;
+        max-width: 167px;
+        margin: 0 auto;
+    }
+    &__name,
+    &__country,
+    &__price {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $main;
+        margin-top: 12px;
+    }
+    &__name {
+        text-align: center;
+    }
+    &__country {
+        text-align: right;
+    }
+    &__price {
+        font-weight: 700;
+        text-align: right;
+    }
+}
