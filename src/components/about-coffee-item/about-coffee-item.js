@@ -5,7 +5,8 @@ import './about-coffee-item.scss';
 
 import aboutCoffeeItem from '../../img/about-coffee-item.jpg';
 
-const AboutCoffeeItem = () => {
+const AboutCoffeeItem = (props) => {
+	const {name, country, description, price} = props.coffeeItem;
     return (
         <section className="about-coffee-item">
 			<div className="about-coffee-item__container">
@@ -14,11 +15,11 @@ const AboutCoffeeItem = () => {
 						<img src={aboutCoffeeItem} alt="coffee" />
 					</div>
 					<div className="about-coffee-item__txt">
-                        <SectionTitle title="About it" />
+                        <SectionTitle title={name} />
 						<Divider />
-						<p className="about-coffee-item__country"><span>Country:</span> Brasil</p>
-						<p className="about-coffee-item__descr"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p className="about-coffee-item__price">Price:  <span>16.99$</span></p>
+						<p className="about-coffee-item__country"><span>Country:</span> {country}</p>
+						<p className="about-coffee-item__descr"><span>Description:</span> {description}</p>
+						<p className="about-coffee-item__price">Price: <span>{price}$</span></p>
 					</div>
 				</div>
 			</div>

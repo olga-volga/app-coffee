@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import Header from '../header/header';
 import Divider from '../divider/divider';
 
@@ -15,7 +16,7 @@ const Main = () => {
 						<h2 className="main__subtitle">We makes every day full of energy and taste</h2>
 						<h2 className="main__subtitle">Want to try our beans?</h2>
 					</div>
-					<a href="#" className="main__link">More</a>
+					<Link to="/coffee" className="main__link">More</Link>
 				</div>
 			</div>
 		</section>

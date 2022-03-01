@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 
 import Logo from '../logo/logo';
 
@@ -30,13 +31,11 @@ class Header extends Component {
 		return (
 			<header className="header">
 				<div className="header__body">
-					<Logo 
-						href="#"
-						white={true} />
+					<Logo white={true} />
 					<nav className={menuClassNames} onClick={this.toggleState}>
 						<ul className="header__list">
-							<li><a href="#" className="header__link">Our coffee</a></li>
-							<li><a href="#" className="header__link">For your pleasure</a></li>
+							<li><NavLink exact to="/coffee" className="header__link">Our coffee</NavLink></li>
+							<li><NavLink exact to="/pleasure" className="header__link">For your pleasure</NavLink></li>
 						</ul>
 					</nav>
 					<div className={burgerClassNames} onClick={this.toggleState} >

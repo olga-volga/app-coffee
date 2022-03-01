@@ -2,11 +2,11 @@ import CoffeeListItem from '../coffee-list-item/coffee-list-item';
 
 import './coffee-list.scss';
 
-const CoffeeList = ({data}) => {
+const CoffeeList = ({data, updateCoffeeItem}) => {
 	const coffeeItems = data.map(item => {
 		const {...itemProps} = item;
 		return (
-			<CoffeeListItem key={item.id} {...itemProps} />
+			<CoffeeListItem key={item.id} {...itemProps} updateCoffeeItem={updateCoffeeItem} />
 		);
 	});
     return (

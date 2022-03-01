@@ -1,3 +1,5 @@
+import {NavLink} from 'react-router-dom';
+
 import Logo from '../logo/logo';
 import Divider from '../divider/divider';
 
@@ -9,11 +11,11 @@ const Footer = () => {
 			<div className="container">
 				<div className="footer__body">
 					<div className="footer__nav">
-                        <Logo href="#" />
+                        <Logo />
 						<nav className="footer__menu">
 							<ul className="footer__list">
-								<li><a href="#" className="footer__link">Our coffee</a></li>
-								<li><a href="#" className="footer__link">For your pleasure</a></li>
+								<li><NavLink exact to="/coffee" className="footer__link">Our coffee</NavLink></li>
+								<li><NavLink exact to="/pleasure" className="footer__link">For your pleasure</NavLink></li>
 							</ul>
 						</nav>
 					</div>
