@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Coffee House React App
+
+**In this project I mastered:**
+* React
+* react-create-app
+* react-router
+
+**Demo:**
+[Coffee React App](https://app-coffee-1.herokuapp.com)
+
+**To run this project locally:**
+* clone with `git clone https://github.com/olga-volga/app-coffee.git`
+* `cd coffee`
+* `npm install`
+* `npm start`
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
